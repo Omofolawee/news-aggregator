@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Aggregator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <h1 class="logo">Newsfinder</h1>
+        <div class="buttons">
+          <button
+            class="btn"
+            onclick="fetchNews('recent'); updateHistory('recent')"
+          >
+            Home
+          </button>
+          <button
+            class="btn"
+            onclick="fetchNews('national'); updateHistory('national')"
+          >
+            Politics
+          </button>
+          <button
+            class="btn"
+            onclick="fetchNews('education'); updateHistory('education')"
+          >
+            Education
+          </button>
+          <button
+            class="btn"
+            onclick="fetchNews('entertainment'); updateHistory('entertainment')"
+          >
+            Entertainment
+          </button>
+          <button
+            class="btn"
+            onclick="fetchNews('business'); updateHistory('business')"
+          >
+            Business
+          </button>
+          <button
+            class="btn"
+            onclick="fetchNews('sports'); updateHistory('sports')"
+          >
+            Sports
+          </button>
+          <!-- Add more categories as needed -->
+        </div>
+        <img src="images/hamburger.svg" alt="" class="ham" />
+      </nav>
+
+      <div class="body">
+        <h1 class="header">Top News Stories</h1>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for news..."
+          />
+          <div class="search-button">
+            <img src="images/search.svg" alt="" class="search-icon" />
+            <img src="images/spin.svg" alt="" class="search-spin" />
+          </div>
+        </div>
+        <!-- News articles will appear here -->
+        <div class="news-container" id="news-container"></div>
+      </div>
+    </div>
+    <script src="news.js"></script>
+  </body>
+</html>
